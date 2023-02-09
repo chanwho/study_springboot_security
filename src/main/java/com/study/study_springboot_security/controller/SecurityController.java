@@ -6,13 +6,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class SecurityController {
-    @GetMapping({ "/admin" }) // 관리자 접속
-    public ModelAndView main(ModelAndView modelAndView) {
-        String viewName = "/WEB-INF/views/admin.jsp";
-        modelAndView.setViewName(viewName);
-        return modelAndView;
-    }
-
     @GetMapping({ "/loginForm" }) // 로그인 폼 작성
     public ModelAndView loginForm(ModelAndView modelAndView) {
         String viewName = "/WEB-INF/views/security/loginForm.jsp";
@@ -20,7 +13,7 @@ public class SecurityController {
         return modelAndView;
     }
 
-    @GetMapping({ "/logoutForm" }) // 로그인 폼 작성
+    @GetMapping({ "/logoutForm" }) // 로그아웃 폼 작성
     public ModelAndView logoutForm(ModelAndView modelAndView) {
         String viewName = "/WEB-INF/views/security/logoutForm.jsp";
         modelAndView.setViewName(viewName);
