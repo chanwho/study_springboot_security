@@ -1,5 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <html lang="en">
 
 <head>
@@ -15,13 +13,10 @@
 
 <body>
     <div class="container">
-        <c:if test="${not empty param.fail}">
-            <div><font color="red"> Login Fail ! </font></div>
-        </c:if>
-        <form class="form-signin" method="post" action="/login">
-            <h2 class="form-signin-heading">We Made Please sign in</h2>
+        <form class="form-signin" method="post" action="/joinProc">
+            <h2 class="form-signin-heading">Join Form</h2>
             <p>
-                <label for="username" class="sr-only">Username</label>
+                <label for="username" class="sr-only">Username ID</label>
                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" required=""
                     autofocus="" value="test_01">
             </p>
@@ -30,7 +25,17 @@
                 <input type="password" id="password" name="password" class="form-control" placeholder="Password"
                     required="" value="1234">
             </p>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <p>
+                <label for="NAME" class="sr-only">NAME</label>
+                <input type="NAME" id="NAME" name="NAME" class="form-control" placeholder="NAME"
+                    required="" value="test_first">
+            </p>
+            <p>
+                <label for="phone" class="sr-only">phone</label>
+                <input type="phone" id="phone" name="phone" class="form-control" placeholder="phone"
+                    required="" value="010-1234-5678">
+            </p>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Join</button>
         </form>
     </div>
 </body>
